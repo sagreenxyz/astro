@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Astro Markdown Site">
+	<div style="background: #23262d; padding: 2rem; border-radius: 8px;">
+		<h1 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-top: 0;">
+			About This Site
+		</h1>
+		<p style="color: #ccc; line-height: 1.6; font-size: 1.1rem;">
+			This is an Astro-powered website designed for holding and presenting markdown documents. 
+			It provides a clean, modern interface for organizing and displaying your content.
+		</p>
+		
+		<h2 style="color: rgb(var(--accent-light)); margin-top: 2rem;">What is Astro?</h2>
+		<p style="color: #ccc; line-height: 1.6;">
+			Astro is a modern web framework that helps you build faster websites with less client-side JavaScript. 
+			It's perfect for content-focused sites like documentation, blogs, and portfolios.
+		</p>
+		
+		<h2 style="color: rgb(var(--accent-light)); margin-top: 2rem;">Getting Started</h2>
+		<p style="color: #ccc; line-height: 1.6;">
+			To add new markdown documents:
+		</p>
+		<ol style="color: #ccc; line-height: 1.8;">
+			<li>Create a new <code style="background: #1a1c21; padding: 0.2rem 0.4rem; border-radius: 4px;">.md</code> file in the <code style="background: #1a1c21; padding: 0.2rem 0.4rem; border-radius: 4px;">src/pages/docs/</code> directory</li>
+			<li>Add frontmatter with title and description</li>
+			<li>Write your content in Markdown</li>
+			<li>Your page will automatically be available</li>
+		</ol>
+		
+		<h2 style="color: rgb(var(--accent-light)); margin-top: 2rem;">Future Expansion</h2>
+		<p style="color: #ccc; line-height: 1.6;">
+			This site is designed with future expansion in mind. You can easily add:
+		</p>
+		<ul style="color: #ccc; line-height: 1.8;">
+			<li>Additional pages and sections</li>
+			<li>Search functionality</li>
+			<li>Tags and categories</li>
+			<li>Comments and interactions</li>
+			<li>Custom components and widgets</li>
+		</ul>
+	</div>
+</Layout>
