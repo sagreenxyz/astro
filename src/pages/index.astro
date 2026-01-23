@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home - Astro Markdown Site">
+	<div style="text-align: center; padding: 2rem 0;">
+		<h1 style="font-size: 3rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem;">
+			Welcome to Your Astro Markdown Site
+		</h1>
+		<p style="font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto 2rem;">
+			A modern website for holding and presenting your markdown documents with room for future expansion.
+		</p>
+		<div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+			<a href="/docs" style="background: rgb(var(--accent)); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: opacity 0.2s;">
+				Browse Documentation
+			</a>
+			<a href="/about" style="background: #333; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: opacity 0.2s;">
+				Learn More
+			</a>
+		</div>
+	</div>
+	
+	<div style="background: #23262d; padding: 2rem; border-radius: 8px; margin-top: 4rem;">
+		<h2 style="color: rgb(var(--accent-light)); margin-top: 0;">Features</h2>
+		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+			<div>
+				<h3 style="color: rgb(var(--accent-light)); margin-top: 0;">📝 Markdown Support</h3>
+				<p style="color: #ccc;">Write your content in Markdown with full syntax support.</p>
+			</div>
+			<div>
+				<h3 style="color: rgb(var(--accent-light)); margin-top: 0;">🚀 Fast Performance</h3>
+				<p style="color: #ccc;">Built with Astro for lightning-fast page loads.</p>
+			</div>
+			<div>
+				<h3 style="color: rgb(var(--accent-light)); margin-top: 0;">🎨 Beautiful Design</h3>
+				<p style="color: #ccc;">Clean, modern design that's easy on the eyes.</p>
+			</div>
+			<div>
+				<h3 style="color: rgb(var(--accent-light)); margin-top: 0;">📚 Organized Content</h3>
+				<p style="color: #ccc;">Keep your documents well-organized and easy to find.</p>
+			</div>
+		</div>
+	</div>
+</Layout>

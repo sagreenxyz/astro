@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Get all markdown files in the docs directory
+const docs = Object.values(import.meta.glob('./*.md', { eager: true }));
+---
+
+<Layout title="Documentation - Astro Markdown Site">
+	<div style="background: #23262d; padding: 2rem; border-radius: 8px;">
+		<h1 style="background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-top: 0;">
+			Documentation
+		</h1>
+		<p style="color: #ccc; font-size: 1.1rem; margin-bottom: 2rem;">
+			Browse through our markdown documents below.
+		</p>
+		
+		{docs.length > 0 ? (
+			<div style="display: grid; gap: 1rem;">
+				{docs.map((doc) => (
+					<a 
+						href={doc.url} 
+						style="display: block; background: #1a1c21; padding: 1.5rem; border-radius: 8px; text-decoration: none; border: 1px solid transparent; transition: border-color 0.2s;"
+						onmouseover="this.style.borderColor='rgb(136, 58, 234)'"
+						onmouseout="this.style.borderColor='transparent'"
+					>
+						<h2 style="color: rgb(var(--accent-light)); margin: 0 0 0.5rem 0;">
+							{doc.frontmatter?.title || 'Untitled Document'}
+						</h2>
+						{doc.frontmatter?.description && (
+							<p style="color: #888; margin: 0;">
+								{doc.frontmatter.description}
+							</p>
+						)}
+						{doc.frontmatter?.date && (
+							<p style="color: #666; margin: 0.5rem 0 0 0; font-size: 0.9rem;">
+								{doc.frontmatter.date}
+							</p>
+						)}
+					</a>
+				))}
+			</div>
+		) : (
+			<div style="background: #1a1c21; padding: 2rem; border-radius: 8px; text-align: center;">
+				<p style="color: #888; margin: 0;">
+					No documents yet. Create a new <code style="background: #13151a; padding: 0.2rem 0.4rem; border-radius: 4px;">.md</code> file in <code style="background: #13151a; padding: 0.2rem 0.4rem; border-radius: 4px;">src/pages/docs/</code> to get started.
+				</p>
+			</div>
+		)}
+	</div>
+</Layout>
